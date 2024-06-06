@@ -133,6 +133,11 @@ document.getElementById('submitButton').addEventListener('click', function() {
   const utsTotal= (utsTeori+utsPraktik)/2*0.30;
   const uasTotal= (uasTeori+uasPraktik)/2*0.40;
   const nilaiAkhir = (presensiTotal+tugasTotal+utsTotal+uasTotal)
+
+  if (!nim || !nama || isNaN(presensiTeori) || isNaN(tugasTeori) || isNaN(utsTeori) || isNaN(uasTeori) || isNaN(presensiPraktik) || isNaN(tugasPraktik) || isNaN(utsPraktik) || isNaN(uasPraktik)) {
+        alert('HARAP ISIKAN SEMUA DATA!');
+        return;
+    }
       let grade;
   if (nilaiAkhir >= 80) {
       grade = 'A';
