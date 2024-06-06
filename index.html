@@ -128,12 +128,12 @@ document.getElementById('submitButton').addEventListener('click', function() {
   const utsPraktik = parseFloat(document.getElementById('utsPraktik').value);
   const uasPraktik = parseFloat(document.getElementById('uasPraktik').value);
 
-  const presensiTotal= (presensiTeori+presensiPraktik)/2;
-  const tugasTotal= (tugasTeori+tugasPraktik)/2;
-  const utsTotal= (utsTeori+utsPraktik)/2;
-  const uasTotal= (uasTeori+uasPraktik)/2;
-  const nilaiAkhir = (presensiTeori + tugasTeori + utsTeori + uasTeori + presensiPraktik + tugasPraktik + utsPraktik + uasPraktik) / 8;
-  let grade;
+  const presensiTotal= (presensiTeori+presensiPraktik)/2*0.10;
+  const tugasTotal= (tugasTeori+tugasPraktik)/2*0.20;
+  const utsTotal= (utsTeori+utsPraktik)/2*0.30;
+  const uasTotal= (uasTeori+uasPraktik)/2*0.40;
+  const nilaiAkhir = (presensiTotal+tugasTotal+utsTotal+uasTotal)
+      let grade;
   if (nilaiAkhir >= 80) {
       grade = 'A';
   } else if (nilaiAkhir >= 70) {
